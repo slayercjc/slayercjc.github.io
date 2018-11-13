@@ -276,7 +276,7 @@
         <div class="article-entry" itemprop="articleBody">
             <h2 id="1-首先下载-Git-和-Node-js"><a href="#1-首先下载-Git-和-Node-js" class="headerlink" title="1.首先下载 Git 和 Node.js"></a>1.首先下载 <a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a> 和 <a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git下载地址：http://git-scm.com/</span><br><span class="line">Node.js下载地址：http://nodejs.org/</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>下载完后都默认安装就可以了！</p>
+<p>下载完后都默认安装就可以了！<br><a id="more"></a></p>
 </blockquote>
 <h2 id="2-打开桌面的Git-Bash"><a href="#2-打开桌面的Git-Bash" class="headerlink" title="2.打开桌面的Git Bash"></a>2.打开桌面的Git Bash</h2><p><img src="https://i.imgur.com/mQb7265.png" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入：npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
@@ -295,13 +295,57 @@
 <blockquote>
 <p>hexo g 的意思是生成静态文件。<br>hexo s 的意思是启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
 </blockquote>
+<h2 id="5-发布到Github"><a href="#5-发布到Github" class="headerlink" title="5.发布到Github"></a>5.发布到Github</h2><h3 id="1-首先打开Git-Bash初始化"><a href="#1-首先打开Git-Bash初始化" class="headerlink" title="1.首先打开Git Bash初始化"></a>1.首先打开Git Bash初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;John Doe&quot;</span><br><span class="line">$ git config --global user.email johndoe@example.com</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>“John Doe” 和 <a href="mailto:johndoe@example.com" target="_blank" rel="noopener">johndoe@example.com</a> 输入你的名字和邮箱</p>
+</blockquote>
+<h3 id="2接下来配置github发布秘钥"><a href="#2接下来配置github发布秘钥" class="headerlink" title="2接下来配置github发布秘钥"></a>2接下来配置github发布秘钥</h3><p>打开Git Bash输入<code>ssh-keygen -t rsa -C &quot;username&quot;</code> </p>
+<blockquote>
+<p>(注：username为你git上的用户名)</p>
+</blockquote>
+<blockquote>
+<p>如果执行成功。返回：<br>Generating public/private rsa key pair.<br>Enter file in which to save the key (/Users/username/.ssh/id_rsa): //这里的username是电脑上的用户名，这个地址也是文件的存储地址，然后我们按回车。</p>
+</blockquote>
+<blockquote>
+<p>如果你以前有存储地址会返回:/Users/your username/.ssh/id_rsa already exists.Overwrite (y/n)? //直接输入y回车。</p>
+</blockquote>
+<blockquote>
+<p>如果以前没有储存地址就会出现:<br>Enter passphrase(empty for no passphrase): //也直接回车，两种情况回车后都会出现 Enter same passphrase again 然后接着回车会显示一长串内容其中还有一些..o.. o oo .oS. 之类的代码，这说明SSH key就已经生成了。</p>
+</blockquote>
+<blockquote>
+<p>文件目录就是：c:/User/username/.ssh/id_rsa.pub</p>
+</blockquote>
+<h3 id="3-打开Github官网注册账号，然后登录并创建仓库"><a href="#3-打开Github官网注册账号，然后登录并创建仓库" class="headerlink" title="3.打开Github官网注册账号，然后登录并创建仓库"></a>3.打开<a href="www.github.com">Github</a>官网注册账号，然后登录并创建仓库</h3><p><img src="https://i.imgur.com/o9nJ3sr.png" alt=""></p>
+<p><img src="https://i.imgur.com/ZopSEoj.png" alt=""></p>
+<blockquote>
+<p>红色部分的名字得和你用户名一样，后面的github.io是固定不变的，因为我之前创建过了所以会报错，你们没创建过就不会有错误提示，写好了以后点下面的绿色按钮Create repository</p>
+</blockquote>
+<h3 id="4-绑定Github"><a href="#4-绑定Github" class="headerlink" title="4.绑定Github"></a>4.绑定Github</h3><h4 id="4-1进入设置（Settings）找到"><a href="#4-1进入设置（Settings）找到" class="headerlink" title="4.1进入设置（Settings）找到"></a>4.1进入设置（Settings）找到</h4><p><img src="https://i.imgur.com/fUs3MU9.png" alt=""></p>
+<h4 id="4-2复制秘钥"><a href="#4-2复制秘钥" class="headerlink" title="4.2复制秘钥"></a>4.2复制秘钥</h4><blockquote>
+<p>然后将刚生成的<code>c:/User/username/.ssh/id_rsa.pub</code>文件用记事本打开复制所有内容</p>
+</blockquote>
+<h4 id="4-3-然后将你复制的内容粘贴到key中"><a href="#4-3-然后将你复制的内容粘贴到key中" class="headerlink" title="4.3 然后将你复制的内容粘贴到key中"></a>4.3 然后将你复制的内容粘贴到key中</h4><p><img src="https://i.imgur.com/jhG1Fij.png" alt=""><br><img src="https://i.imgur.com/7K3JOFF.png" alt=""></p>
+<blockquote>
+<p>再点击Add SSH Key<br>ok还有最后一步</p>
+</blockquote>
+<h4 id="4-4-测试是否和Github绑定成功"><a href="#4-4-测试是否和Github绑定成功" class="headerlink" title="4.4 测试是否和Github绑定成功"></a>4.4 测试是否和Github绑定成功</h4><p>打开Git Bash 输入<code>ssh -T git@github.com</code>如果看到以下画面就说明成功了。<br><img src="https://i.imgur.com/aD67KHG.png" alt=""></p>
+<h3 id="5-修改hexo文件"><a href="#5-修改hexo文件" class="headerlink" title="5.修改hexo文件"></a>5.修改hexo文件</h3><p>进入第3步初始化的博客目录找到<code>_config.yml</code>文件，用编辑器打开修改<br><code>deploy</code>和<code>type</code>字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: 这里是你Github的地址</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>repo地址怎么找？打开你的Github，找到刚创建的项目<br><img src="https://i.imgur.com/ja91Dco.png" alt=""></p>
+</blockquote>
+<h3 id="6-安装git插件"><a href="#6-安装git插件" class="headerlink" title="6.安装git插件"></a>6.安装git插件</h3><p>打开 Git Bash执行下面代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<h3 id="7-同步到Github"><a href="#7-同步到Github" class="headerlink" title="7.同步到Github"></a>7.同步到Github</h3><p>在本地博客目录右键打开Git Bash，输入<code>hexo g</code>再输入<code>hexo d</code>,等待片刻本地博客就同步到Github了，然后输入网址：<code>username.github.io</code>就可以访问了，这里的username改成你的创建仓库时候的名字。</p>
+<blockquote>
+<p>例如：我的就是 slayercjc.github.io</p>
+</blockquote>
 
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-11-11T10:15:08+08:00" content="2018-11-11">
+            <time class="time" itemprop="dateUpdated" datetime="2018-11-13T08:59:01+08:00" content="2018-11-13">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
-                本文最后更新于：2018-11-11
+                本文最后更新于：2018-11-13
             </time>
             
         </section>
@@ -471,7 +515,7 @@
     <section class="m_widget toc-wrapper">
         <div class="header"><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;目录</div>
         <div class="content">
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-首先下载-Git-和-Node-js"><span class="toc-text">1.首先下载 Git 和 Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-打开桌面的Git-Bash"><span class="toc-text">2.打开桌面的Git Bash</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-初始化"><span class="toc-text">3.初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-启动本地博客"><span class="toc-text">4.启动本地博客</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-首先下载-Git-和-Node-js"><span class="toc-text">1.首先下载 Git 和 Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-打开桌面的Git-Bash"><span class="toc-text">2.打开桌面的Git Bash</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-初始化"><span class="toc-text">3.初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-启动本地博客"><span class="toc-text">4.启动本地博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-发布到Github"><span class="toc-text">5.发布到Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-首先打开Git-Bash初始化"><span class="toc-text">1.首先打开Git Bash初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2接下来配置github发布秘钥"><span class="toc-text">2接下来配置github发布秘钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-打开Github官网注册账号，然后登录并创建仓库"><span class="toc-text">3.打开Github官网注册账号，然后登录并创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-绑定Github"><span class="toc-text">4.绑定Github</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1进入设置（Settings）找到"><span class="toc-text">4.1进入设置（Settings）找到</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2复制秘钥"><span class="toc-text">4.2复制秘钥</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-然后将你复制的内容粘贴到key中"><span class="toc-text">4.3 然后将你复制的内容粘贴到key中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-测试是否和Github绑定成功"><span class="toc-text">4.4 测试是否和Github绑定成功</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-修改hexo文件"><span class="toc-text">5.修改hexo文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-安装git插件"><span class="toc-text">6.安装git插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-同步到Github"><span class="toc-text">7.同步到Github</span></a></li></ol></li></ol>
         </div>
     </section>
 
