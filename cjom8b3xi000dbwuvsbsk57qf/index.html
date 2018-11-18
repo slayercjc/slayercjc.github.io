@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Linux下复制与粘贴 | Slayercjc Blog</title>
+  <title>执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded. | Slayercjc Blog</title>
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="https://img.vim-cn.com/e1/c3232a7fc759e51ce62b9319b52c2cb1356b7e">
@@ -166,10 +166,10 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            <article id="post-Linux下复制与粘贴" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
+            <article id="post-执行service-iptables-start出现redirecting-to-systemctl-Failed-to-not-loaded" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
     <section class="meta">
         
-            <h1 class="title">Linux下复制与粘贴</h1>
+            <h1 class="title">执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.</h1>
         
         <time class="time">
             <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
@@ -191,19 +191,18 @@
     <section class="article typo">
 
         <div class="article-entry" itemprop="articleBody">
-            <p><code>yy</code> 复制当前行</p>
-<p><code>yw</code> 复制一个单词 </p>
-<p><code>y$</code> 复制光标到结尾 </p>
-<p><code>y^</code> 复制光标到行首 </p>
-<p><code>+yy</code> 复制+行 </p>
-<p><code>+yw</code> 复制+个单词 </p>
-<p><code>m,ny</code> 复制m到n行内容。</p>
-<p>粘贴为<code>p</code></p>
-
+            <p>在centOS 7系统中运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables stop</span><br></pre></td></tr></table></figure>
+<p>发现出错。</p>
+<p>解决办法： </p>
+<p>切换到root用户下，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install iptables-service</span><br><span class="line">service <span class="built_in">enable</span> iptables //设置开机启动</span><br></pre></td></tr></table></figure>
+<p>之后就可以使用以下指令了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables [start|stop|restart|save]</span><br></pre></td></tr></table></figure>
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-11-18T09:20:19+08:00" content="2018-11-18">
+            <time class="time" itemprop="dateUpdated" datetime="2018-11-18T08:52:09+08:00" content="2018-11-18">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
                 本文最后更新于：2018-11-18
             </time>
@@ -211,7 +210,7 @@
                 
                 <div class="tags">
                     <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
-                    <a class="tag" href="/tags/centos/">centos</a>, <a class="tag" href="/tags/linux/">linux</a>
+                    <a class="tag" href="/tags/nginx/">nginx</a>, <a class="tag" href="/tags/centos/">centos</a>
                 </div>
             
         </section>
@@ -223,9 +222,9 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
                             <h4>
-                                <a href="/cjom824uz0009oguvffkftmhp/" rel="prev" title="hexo 发布之后 gitpage 自定义域名失效">
+                                <a href="/cjom8b3xf000abwuv1amasmcg/" rel="prev" title="Linux下复制与粘贴">
                                   
-                                      hexo 发布之后 gitpage 自定义域名失效
+                                      Linux下复制与粘贴
                                   
                                 </a>
                             </h4>
@@ -233,7 +232,7 @@
                                 
                                 <h6 class="tags">
                                     <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
-                                    <a class="tag" href="/tags/hexo/">hexo</a>, <a class="tag" href="/tags/域名/">域名</a>
+                                    <a class="tag" href="/tags/centos/">centos</a>, <a class="tag" href="/tags/linux/">linux</a>
                                 </h6>
                             
                         </span>
@@ -244,9 +243,9 @@
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/cjom824ux0008oguvruqhqkkz/" rel="prev" title="执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.">
+                                <a href="/cjom8b3x00001bwuv0gpl5gma/" rel="prev" title="CentOS7+Nginx设置Systemctl restart nginx.service服务">
                                     
-                                        执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.
+                                        CentOS7+Nginx设置Systemctl restart nginx.service服务
                                     
                                 </a>
                             </h4>
@@ -281,15 +280,15 @@
         <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
         <ul>
             
-                <li><a href="http://slayercjc.ml/cjom824uz0009oguvffkftmhp/">hexo 发布之后 gitpage 自定义域名失效</a></li>
+                <li><a href="http://slayercjc.ml/cjom8b3x50003bwuvgv2pb44h/">hexo 发布之后 gitpage 自定义域名失效</a></li>
             
-                <li><a href="http://slayercjc.ml/cjom824ux0008oguvruqhqkkz/">执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.</a></li>
+                <li><a href="http://slayercjc.ml/cjom8b3xf000abwuv1amasmcg/">Linux下复制与粘贴</a></li>
             
-                <li><a href="http://slayercjc.ml/cjom824ui0000oguvjfu3dygm/">CentOS7+Nginx设置Systemctl restart nginx.service服务</a></li>
+                <li><a href="http://slayercjc.ml/cjom8b3x00001bwuv0gpl5gma/">CentOS7+Nginx设置Systemctl restart nginx.service服务</a></li>
             
-                <li><a href="http://slayercjc.ml/cjom824v4000coguvlnmfkdti/">让你拥有一个免费的博客 hexo安装+绑定免费顶级域名</a></li>
+                <li><a href="http://slayercjc.ml/cjom8b3xe0009bwuv3j7pqgj4/">让你拥有一个免费的博客 hexo安装+绑定免费顶级域名</a></li>
             
-                <li><a href="http://slayercjc.ml/cjom824uq0002oguv3gxfiyrc/">MarkdownPad2 破解版</a></li>
+                <li><a href="http://slayercjc.ml/cjom8b3xb0007bwuvqkakq8iu/">MarkdownPad2 破解版</a></li>
             
         </ul>
     </div>
@@ -326,7 +325,7 @@
 
 <script>
     window.subData = {
-        title: 'Linux下复制与粘贴',
+        title: '执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.',
         tools: true
     }
 </script>
