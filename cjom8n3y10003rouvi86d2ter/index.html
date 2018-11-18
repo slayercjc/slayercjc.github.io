@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Category: 软件 | Slayercjc Blog</title>
+  <title>CentOS7+Nginx设置Systemctl restart nginx.service服务 | Slayercjc Blog</title>
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="https://img.vim-cn.com/e1/c3232a7fc759e51ce62b9319b52c2cb1356b7e">
@@ -166,67 +166,195 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            
-    <script>
-        window.subData= { title:'category : 软件'}
-    </script>
-
-
-<section class="post-list">
-    
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
+            <article id="post-CentOS7-Nginx设置Systemctl-restart-nginx-service服务" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
     <section class="meta">
-        <h2 class="title">
-            <a href="/cjom8n3yf000drouv9wm2nwn9/">
-                
-                    MarkdownPad2 破解版
-                
-            </a>
-        </h2>
+        
+            <h1 class="title">CentOS7+Nginx设置Systemctl restart nginx.service服务</h1>
+        
         <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-11-11
+            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+            2018-11-18
         </time>
+        <div class="browse"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </div>
         
     
     <div class="cats">
         <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/软件/">软件</a>
+        <a class="categories" href="/categories/技术文章/">技术文章</a>
     </div>
 
 
     </section>
 
     <section class="article typo">
-        <h2 id="MarkdownPad2下载地址"><a href="#MarkdownPad2下载地址" class="headerlink" title="MarkdownPad2下载地址:"></a>MarkdownPad2下载地址:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pan.baidu.com/s/1eSKXqka</span><br></pre></td></tr></table></figure>
-        
-            <div class="readmore">
-                <a href="/cjom8n3yf000drouv9wm2nwn9/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
 
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/Markdownpad2/"><i class="fas fa-tag fa-fw"></i>&nbsp;Markdownpad2</a>
-                
-                    <a href="/tags/破解版/"><i class="fas fa-tag fa-fw"></i>&nbsp;破解版</a>
-                
-                    <a href="/tags/下载/"><i class="fas fa-tag fa-fw"></i>&nbsp;下载</a>
-                
-            </div>
-        
-    </section>
-</article>
+        <div class="article-entry" itemprop="articleBody">
+            <p>centos 7以上是用Systemd进行系统初始化的，Systemd 是 Linux 系统中最新的初始化系统（init），它主要的设计目标是克服 sysvinit 固有的缺点，提高系统的启动速度。关于Systemd的详情介绍在这里。</p>
+<p>Systemd服务文件以.service结尾，比如现在要建立nginx为开机启动，如果用yum install命令安装的，yum命令会自动创建nginx.service文件，直接用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemcel <span class="built_in">enable</span> nginx.service</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>设置开机启动即可。<br>在这里我是用源码编译安装的，所以要手动创建nginx.service服务文件。<br>开机没有登陆情况下就能运行的程序，存在系统服务（system）里，即：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/lib/systemd/system/</span><br></pre></td></tr></table></figure>
+<h2 id="1-在系统服务目录里创建nginx-service文件"><a href="#1-在系统服务目录里创建nginx-service文件" class="headerlink" title="1.在系统服务目录里创建nginx.service文件"></a>1.在系统服务目录里创建nginx.service文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /lib/systemd/system/nginx.service</span><br></pre></td></tr></table></figure>
+<p>内容如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=nginx</span><br><span class="line">After=network.target</span><br><span class="line">  </span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br><span class="line">ExecReload=/usr/<span class="built_in">local</span>/nginx/sbin/nginx -s reload</span><br><span class="line">ExecStop=/usr/<span class="built_in">local</span>/nginx/sbin/nginx -s quit</span><br><span class="line">PrivateTmp=<span class="literal">true</span></span><br><span class="line">  </span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>Description:描述服务</p>
+<p>After:描述服务类别</p>
+<p>[Service]服务运行参数的设置</p>
+<p>Type=forking是后台运行的形式</p>
+<p>ExecStart为服务的具体运行命令</p>
+<p>ExecReload为重启命令</p>
+<p>ExecStop为停止命令</p>
+<p>PrivateTmp=True表示给服务分配独立的临时空间</p>
+<p>注意：[Service]的启动、重启、停止命令全部要求使用绝对路径</p>
+<p>[Install]运行级别下服务安装的相关设置，可设置为多用户，即系统运行级别为3</p>
+<p>保存退出。</p>
+<h2 id="2-设置开机启动"><a href="#2-设置开机启动" class="headerlink" title="2.设置开机启动"></a>2.设置开机启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> nginx.service</span><br></pre></td></tr></table></figure>
+<h2 id="3-其他命令"><a href="#3-其他命令" class="headerlink" title="3.其他命令"></a>3.其他命令</h2><p>启动nginx服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx.service</span><br></pre></td></tr></table></figure>
+<p>设置开机自启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> nginx.service</span><br></pre></td></tr></table></figure>
+<p>停止开机自启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">disable</span> nginx.service</span><br></pre></td></tr></table></figure>
+<p>查看服务当前状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status nginx.service</span><br></pre></td></tr></table></figure>
+<p>重新启动服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart nginx.service</span><br></pre></td></tr></table></figure>
+<p>查看所有已启动的服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl list-units --<span class="built_in">type</span>=service</span><br></pre></td></tr></table></figure>
 
         </div>
-    
-</section>
 
+        <section class="meta">
+            <time class="time" itemprop="dateUpdated" datetime="2018-11-18T08:53:04+08:00" content="2018-11-18">
+                <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
+                本文最后更新于：2018-11-18
+            </time>
+            
+                
+                <div class="tags">
+                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                    <a class="tag" href="/tags/centos/">centos</a>, <a class="tag" href="/tags/nginx/">nginx</a>
+                </div>
+            
+        </section>
+
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
+                            <h4>
+                                <a href="/cjom8n3yb000arouvwcuq7kqt/" rel="prev" title="执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.">
+                                  
+                                      执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                                    <a class="tag" href="/tags/centos/">centos</a>, <a class="tag" href="/tags/nginx/">nginx</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/cjom8n3ya0009rouvramrqdfm/" rel="prev" title="让你拥有一个免费的博客 hexo安装+绑定免费顶级域名">
+                                    
+                                        让你拥有一个免费的博客 hexo安装+绑定免费顶级域名
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                                    <a class="tag" href="/tags/hexo/">hexo</a>, <a class="tag" href="/tags/域名/">域名</a>, <a class="tag" href="/tags/博客/">博客</a>, <a class="tag" href="/tags/免费/">免费</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+
+    </section>
+
+</article>
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+    <article class="post white-box comments">
+        <section class="article typo">
+
+            
+                
+
+    <div class="recommended_posts">
+        <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
+        <ul>
+            
+                <li><a href="http://slayercjc.ml/cjom8n3y70007rouv2s0y8rxi/">hexo 发布之后 gitpage 自定义域名失效</a></li>
+            
+                <li><a href="http://slayercjc.ml/cjom8n3xw0001rouv5rm3ivkl/">Linux下复制与粘贴</a></li>
+            
+                <li><a href="http://slayercjc.ml/cjom8n3yb000arouvwcuq7kqt/">执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.</a></li>
+            
+                <li><a href="http://slayercjc.ml/cjom8n3ya0009rouvramrqdfm/">让你拥有一个免费的博客 hexo安装+绑定免费顶级域名</a></li>
+            
+                <li><a href="http://slayercjc.ml/cjom8n3yf000drouv9wm2nwn9/">MarkdownPad2 破解版</a></li>
+            
+        </ul>
+    </div>
+
+
+            
+
+            
+
+                
+
+                
+
+                
+                    
+                        <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Valine评论</h4>
+                        <div class="subtitle">
+                          <h6><b>文明评论，请勿灌水。</b>为了便于区分和接收回复提醒，请您在留言时填写一下<b>昵称</b>和<b>邮箱</b>。</h6>
+                        <div>
+                        <section id="comments">
+                            <div id="valine_container" class="valine_thread">
+                                <i class="fas fa-spinner fa-spin fa-fw"></i>
+                            </div>
+                        </section>
+                        <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+                        <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+                    
+                
+            
+
+        </div></div></section>
+    </article>
+
+
+<script>
+    window.subData = {
+        title: 'CentOS7+Nginx设置Systemctl restart nginx.service服务',
+        tools: true
+    }
+</script>
 
 
         </div>
@@ -369,6 +497,13 @@
     
     
         
+    <section class="m_widget toc-wrapper">
+        <div class="header"><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;目录</div>
+        <div class="content">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-在系统服务目录里创建nginx-service文件"><span class="toc-text">1.在系统服务目录里创建nginx.service文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-设置开机启动"><span class="toc-text">2.设置开机启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-其他命令"><span class="toc-text">3.其他命令</span></a></li></ol>
+        </div>
+    </section>
+
 
     
 
@@ -429,6 +564,35 @@
 <script src="/js/search.js"></script>
 <script src="/js/app.js"></script>
 
+
+    
+    
+    
+        
+            <script>
+            var GUEST_INFO = ['nick','mail','link'];
+            var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+                return GUEST_INFO.indexOf(item) > -1
+            });
+            var notify = 'false' == true;
+            var verify = 'false' == true;
+            var valine = new Valine();
+            valine.init({
+                el: '#valine_container',
+                notify: notify,
+                verify: verify,
+                guest_info: guest_info,
+                appId: "zNF03OeaQnqmIki6p7bHhQpH-gzGzoHsz",
+                appKey: "npQXe9Nhi0lYXE1U5g8H6pDl",
+                placeholder: "快来评论吧~",
+                pageSize:'10',
+                avatar:'mp',
+                lang:'zh-cn',
+                highlight:''
+            })
+            </script>
+        
+    
 
 
     <script>setLoadingBarProgress(100);</script>
