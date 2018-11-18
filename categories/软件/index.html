@@ -76,89 +76,6 @@
   </script>
 </head></html>
 <body>
-    <script type="text/javascript">
-        ! function () {
-            function o(w, v, i) {
-                return w.getAttribute(v) || i
-            }
-
-            function j(i) {
-                return document.getElementsByTagName(i)
-            }
-
-            function l() {
-                var i = j("script"),
-                    w = i.length,
-                    v = i[w - 1];
-                return {
-                    l: w,
-                    z: o(v, "zIndex", -1), //设置动态图显示的层位，一般-1就行，不用改
-                    o: o(v, "opacity", 0.5), //0.5显示的是线条的透明度，可以自行调整
-                    c: o(v, "color", "0,0,0"), //设置线条的颜色，三个0,0,0分别代表RGB颜色数值，不知道的可以打开PS里的拾色器就可以看到RGB数值了
-                    n: o(v, "count", 120), //设置线条显示的数量，有密集恐惧症的朋友可别把数值设置太大哦
-                }
-            }
-
-            function k() {
-                r = u.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, n = u.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-            }
-
-            function b() {
-                e.clearRect(0, 0, r, n);
-                var w = [f].concat(t);
-                var x, v, A, B, z, y;
-                t.forEach(function (i) {
-                    i.x += i.xa, i.y += i.ya, i.xa *= i.x > r || i.x < 0 ? -1 : 1, i.ya *= i.y > n || i.y < 0 ? -1 : 1, e.fillRect(i.x - 0.5, i.y - 0.5, 1, 1);
-                    for (v = 0; v < w.length; v++) {
-                        x = w[v];
-                        if (i !== x && null !== x.x && null !== x.y) {
-                            B = i.x - x.x, z = i.y - x.y, y = B * B + z * z;
-                            y < x.max && (x === f && y >= x.max / 2 && (i.x -= 0.03 * B, i.y -= 0.03 * z), A = (x.max - y) / x.max, e.beginPath(), e.lineWidth = A / 2, e.strokeStyle = "rgba(" + s.c + "," + (A + 0.2) + ")", e.moveTo(i.x, i.y), e.lineTo(x.x, x.y), e.stroke())
-                        }
-                    }
-                    w.splice(w.indexOf(i), 1)
-                }), m(b)
-            }
-            var u = document.createElement("canvas"),
-                s = l(),
-                c = "c_n" + s.l,
-                e = u.getContext("2d"),
-                r, n, m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
-                    window.setTimeout(i, 1000 / 45)
-                },
-                a = Math.random,
-                f = {
-                    x: null,
-                    y: null,
-                    max: 20000
-                };
-            u.id = c;
-            u.style.cssText = "position:fixed;top:0;left:0;z-index:" + s.z + ";opacity:" + s.o;
-            j("body")[0].appendChild(u);
-            k(), window.onresize = k;
-            window.onmousemove = function (i) {
-                i = i || window.event, f.x = i.clientX, f.y = i.clientY
-            }, window.onmouseout = function () {
-                f.x = null, f.y = null
-            };
-            for (var t = [], p = 0; s.n > p; p++) {
-                var h = a() * r,
-                    g = a() * n,
-                    q = 2 * a() - 1,
-                    d = 2 * a() - 1;
-                t.push({
-                    x: h,
-                    y: g,
-                    xa: q,
-                    ya: d,
-                    max: 6000
-                })
-            }
-            setTimeout(function () {
-                b()
-            }, 100)
-        }();
-    </script>
     <div id="loading-bar-wrapper">
   <div id="loading-bar"></div>
 </div>
@@ -242,7 +159,7 @@
 		<div align="center" style="font-family:'微软雅黑','黑体';background-color: rgba(171,242,250,0.3);width: 100%;color: #52A1F8;text-align: center;font-size: 16px;margin-top: 15px;margin-bottom: 15px;border: 1px solid #3EC0FF">
 			<!-- 图标和欢迎语和时间 -->
 			&nbsp;&nbsp;
-			<img style="margin-top: 8px;margin-bottom: 8px;vertical-align:middle;" width="35px" height="35px" src="https://img.vim-cn.com/24/9bc163b996bf97fce0bfcdebb447510fe5b4d7.png">&nbsp;&nbsp;Slayercjc博客欢迎您！今天是<span id="myclock"></span>
+			<i class="fas fa-bullhorn" style="margin-top: 8px;margin-bottom: 8px;vertical-align:middle;" width="35px" height="35px"></i>&nbsp;&nbsp;Slayercjc博客欢迎您！今天是<span id="myclock"></span>
 		</div>
 	</center>
     <script>setLoadingBarProgress(40);</script>
@@ -310,9 +227,21 @@
     <section class="m_widget author">
         
             <div class="header">
-                <img class="avatar" src="https://xaoxuu.com/assets/img/avatar.jpg">
+                <img class="avatar" src="https://img.vim-cn.com/5d/d83a33c1dcb0a50576cd9a0c6fe70a96b14c85.png">
             </div>
         
+        
+            <div class="content">
+                
+                    <h2>Slayercjc Blog</h2>
+                
+                
+                    <div>
+                        <i class="fas fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>
+                        人不犯我，我不犯人，人若犯我，礼让三分，人再犯我，我还一针，人还犯我，斩草除根
+                    </div>
+                
+            </div>
         
         
             <div class="social-wrapper">
@@ -326,6 +255,26 @@
     </section>
 
 
+    
+    
+        <section class="m_widget notice">
+<header class="header">
+    <div><i class="fa fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;公告</div>
+</header>
+    <div class="content">
+        <ul class="entry" id="notice">
+            
+                <li><a class="flat-box">
+                    <div onclick="mizhu.alert('Slayercjc技术博客开通', 'Slayercjc技术博客开通，欢迎小伙伴一起来学习进步！');" class="name alert" title="Slayercjc技术博客开通">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        &nbsp;&nbsp;Slayercjc技术博客开通
+                    </div>
+                </a></li>
+            
+
+        </ul>
+    </div>
+</section>
     
     
         <section class="m_widget categories">
@@ -349,13 +298,7 @@
 
     
     
-        <section class="m_widget music">
-    <div class="header"><i class="fas fa-headphones-alt fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;音乐</div>
-    <div class="content">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="450" src="//music.163.com/outchain/player?type=0&id=2494761142&auto=0&height=450"></iframe>
-    </div>
-</section>
-
+        
     
     
         <section class="m_widget links">
@@ -371,6 +314,15 @@
                             <img src="https://xaoxuu.com/assets/img/avatar.jpg">
                         
                         &nbsp;&nbsp;xaoxuu&#39;s blog
+                    </div>
+                </a></li>
+            
+                <li><a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.wushile.top/">
+                    <div class="name">
+                        
+                            <img src="https://img.vim-cn.com/a2/89c0d159564853fd7d57fb17843d475d97cf8b.png">
+                        
+                        &nbsp;&nbsp;小吴博客
                     </div>
                 </a></li>
             
@@ -415,7 +367,12 @@
 <script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
 <!-- 访问统计 -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
+<!-- 返回顶部 -->
+<script src="/js/back.top.js"></script>
+<!-- 蜘蛛网动态背景 -->
+<script src="/js/bgdt.js"></script>
+<!-- 公告 -->
+<script src="/js/ui.js"></script>
 
 <script src="/js/jquery.fitvids.js"></script>
 
@@ -440,4 +397,7 @@
 
 
     <script>setLoadingBarProgress(100);</script>
+    <div classdivclass="d_out" onmouseover="this.className='d_over'"  onmouseout="this.className='d_out'">
+    <a title="飞回顶部" href="#0" class="cd-top">Top</a>
+    </div>
 </body>
