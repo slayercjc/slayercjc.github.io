@@ -175,6 +175,104 @@
             <article class="post reveal ">
     <section class="meta">
         <h2 class="title">
+            <a href="/2018/11/18/执行service-iptables-start出现redirecting-to-systemctl-Failed-to-not-loaded/">
+                
+                    执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.
+                
+            </a>
+        </h2>
+        <time class="time">
+            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-11-18
+        </time>
+        
+    
+    <div class="cats">
+        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+        <a class="categories" href="/categories/技术文章/">技术文章</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>在centOS 7系统中运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables stop</span><br></pre></td></tr></table></figure>
+<p>发现出错。</p>
+<p>解决办法： </p>
+<p>切换到root用户下，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install iptables-service</span><br><span class="line">service <span class="built_in">enable</span> iptables //设置开机启动</span><br></pre></td></tr></table></figure>
+<p>之后就可以使用以下指令了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables [start|stop|restart|save]</span><br></pre></td></tr></table></figure>
+        
+
+        
+            <div class="full-width auto-padding tags">
+                
+                    <a href="/tags/nginx/"><i class="fas fa-tag fa-fw"></i>&nbsp;nginx</a>
+                
+                    <a href="/tags/centos/"><i class="fas fa-tag fa-fw"></i>&nbsp;centos</a>
+                
+            </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class="post-wrapper">
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2018/11/18/CentOS7-Nginx设置Systemctl-restart-nginx-service服务/">
+                
+                    CentOS7+Nginx设置Systemctl restart nginx.service服务
+                
+            </a>
+        </h2>
+        <time class="time">
+            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-11-18
+        </time>
+        
+    
+    <div class="cats">
+        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+        <a class="categories" href="/categories/技术文章/">技术文章</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>centos 7以上是用Systemd进行系统初始化的，Systemd 是 Linux 系统中最新的初始化系统（init），它主要的设计目标是克服 sysvinit 固有的缺点，提高系统的启动速度。关于Systemd的详情介绍在这里。</p>
+<p>Systemd服务文件以.service结尾，比如现在要建立nginx为开机启动，如果用yum install命令安装的，yum命令会自动创建nginx.service文件，直接用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemcel <span class="built_in">enable</span> nginx.service</span><br></pre></td></tr></table></figure>
+        
+            <div class="readmore">
+                <a href="/2018/11/18/CentOS7-Nginx设置Systemctl-restart-nginx-service服务/" class="flat-box">
+                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+                    阅读全文
+                </a>
+            </div>
+        
+
+        
+            <div class="full-width auto-padding tags">
+                
+                    <a href="/tags/nginx/"><i class="fas fa-tag fa-fw"></i>&nbsp;nginx</a>
+                
+                    <a href="/tags/centos/"><i class="fas fa-tag fa-fw"></i>&nbsp;centos</a>
+                
+            </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class="post-wrapper">
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
             <a href="/2018/11/11/让你拥有一个免费的博客-hexo安装-绑定免费顶级域名/">
                 
                     让你拥有一个免费的博客 hexo安装+绑定免费顶级域名
@@ -196,8 +294,6 @@
 
     <section class="article typo">
         <h2 id="1-首先下载-Git-和-Node-js"><a href="#1-首先下载-Git-和-Node-js" class="headerlink" title="1.首先下载 Git 和 Node.js"></a>1.首先下载 <a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a> 和 <a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git下载地址：http://git-scm.com/</span><br><span class="line">Node.js下载地址：http://nodejs.org/</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>下载完后都默认安装就可以了！<br>
         
             <div class="readmore">
                 <a href="/2018/11/11/让你拥有一个免费的博客-hexo安装-绑定免费顶级域名/" class="flat-box">
@@ -208,7 +304,19 @@
         
 
         
-    </p></blockquote></section>
+            <div class="full-width auto-padding tags">
+                
+                    <a href="/tags/hexo/"><i class="fas fa-tag fa-fw"></i>&nbsp;hexo</a>
+                
+                    <a href="/tags/博客/"><i class="fas fa-tag fa-fw"></i>&nbsp;博客</a>
+                
+                    <a href="/tags/免费/"><i class="fas fa-tag fa-fw"></i>&nbsp;免费</a>
+                
+                    <a href="/tags/域名/"><i class="fas fa-tag fa-fw"></i>&nbsp;域名</a>
+                
+            </div>
+        
+    </section>
 </article>
 
         </div>
@@ -247,6 +355,16 @@
             </div>
         
 
+        
+            <div class="full-width auto-padding tags">
+                
+                    <a href="/tags/Markdownpad2/"><i class="fas fa-tag fa-fw"></i>&nbsp;Markdownpad2</a>
+                
+                    <a href="/tags/破解版/"><i class="fas fa-tag fa-fw"></i>&nbsp;破解版</a>
+                
+                    <a href="/tags/下载/"><i class="fas fa-tag fa-fw"></i>&nbsp;下载</a>
+                
+            </div>
         
     </section>
 </article>
@@ -321,7 +439,7 @@
         
             <ul class="entry">
                 
-                    <li><a class="flat-box" href="/categories/技术文章/"><div class="name">技术文章</div><div class="badge">1</div></a></li>
+                    <li><a class="flat-box" href="/categories/技术文章/"><div class="name">技术文章</div><div class="badge">3</div></a></li>
                 
                     <li><a class="flat-box" href="/categories/软件/"><div class="name">软件</div><div class="badge">1</div></a></li>
                 
@@ -333,6 +451,13 @@
     
     
         
+    <section class="m_widget tagcloud">
+        <div class="header"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
+        <div class="content">
+            <a href="/tags/Markdownpad2/" style="font-size: 14px; color: #999">Markdownpad2</a> <a href="/tags/centos/" style="font-size: 24px; color: #555">centos</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/nginx/" style="font-size: 24px; color: #555">nginx</a> <a href="/tags/下载/" style="font-size: 14px; color: #999">下载</a> <a href="/tags/免费/" style="font-size: 14px; color: #999">免费</a> <a href="/tags/博客/" style="font-size: 14px; color: #999">博客</a> <a href="/tags/域名/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/破解版/" style="font-size: 14px; color: #999">破解版</a>
+        </div>
+    </section>
+
 
     
     
