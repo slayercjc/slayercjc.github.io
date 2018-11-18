@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Linux下复制与粘贴 | Slayercjc Blog</title>
+  <title>让你拥有一个免费的博客 hexo安装+绑定免费顶级域名 | Slayercjc Blog</title>
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="https://img.vim-cn.com/e1/c3232a7fc759e51ce62b9319b52c2cb1356b7e">
@@ -166,14 +166,14 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            <article id="post-Linux下复制与粘贴" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
+            <article id="post-让你拥有一个免费的博客-hexo安装-绑定免费顶级域名" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
     <section class="meta">
         
-            <h1 class="title">Linux下复制与粘贴</h1>
+            <h1 class="title">让你拥有一个免费的博客 hexo安装+绑定免费顶级域名</h1>
         
         <time class="time">
             <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-            2018-11-18
+            2018-11-11
         </time>
         <div class="browse"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
           <span id="busuanzi_value_page_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
@@ -191,13 +191,77 @@
     <section class="article typo">
 
         <div class="article-entry" itemprop="articleBody">
-            <p>yy复制当前行<br>yw复制一个单词<br>y$复制光标到结尾<br>y^复制光标到行首<br>+yy复制+行<br>+yw复制+个单词<br>m,ny复制m到n行内容。</p>
-<p>粘贴为“p”</p>
+            <h2 id="1-首先下载-Git-和-Node-js"><a href="#1-首先下载-Git-和-Node-js" class="headerlink" title="1.首先下载 Git 和 Node.js"></a>1.首先下载 <a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a> 和 <a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git下载地址：http://git-scm.com/</span><br><span class="line">Node.js下载地址：http://nodejs.org/</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<blockquote>
+<p>下载完后都默认安装就可以了！</p>
+</blockquote>
+<h2 id="2-打开桌面的Git-Bash"><a href="#2-打开桌面的Git-Bash" class="headerlink" title="2.打开桌面的Git Bash"></a>2.打开桌面的Git Bash</h2><p><img src="https://i.imgur.com/mQb7265.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入：npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="3-初始化"><a href="#3-初始化" class="headerlink" title="3.初始化"></a>3.初始化</h2><blockquote>
+<p>你要把博客放在哪个盘就在哪个盘符下右键点击Git Bash Here</p>
+</blockquote>
+<p><img src="https://i.imgur.com/46HLwti.png" alt=""></p>
+<p>然后输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意blog只是个名字，你想换别的名字也可以，例如：hexo init aaa</p>
+</blockquote>
+<p>初始化完成关闭 Git Bash Here，然后进入刚才初始化生成的博客目录，比如<code>f:/blog;f:/aaa</code>,再右键点击Git Bash Here</p>
+<p>然后输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-启动本地博客"><a href="#4-启动本地博客" class="headerlink" title="4.启动本地博客"></a>4.启动本地博客</h2><p>分别输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>hexo g 的意思是生成静态文件。<br>hexo s 的意思是启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
+</blockquote>
+<h2 id="5-发布到Github"><a href="#5-发布到Github" class="headerlink" title="5.发布到Github"></a>5.发布到Github</h2><h3 id="1-首先打开Git-Bash初始化"><a href="#1-首先打开Git-Bash初始化" class="headerlink" title="1.首先打开Git Bash初始化"></a>1.首先打开Git Bash初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;John Doe&quot;</span><br><span class="line">$ git config --global user.email johndoe@example.com</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>“John Doe” 和 <a href="mailto:johndoe@example.com" target="_blank" rel="noopener">johndoe@example.com</a> 输入你的名字和邮箱</p>
+</blockquote>
+<h3 id="2接下来配置github发布秘钥"><a href="#2接下来配置github发布秘钥" class="headerlink" title="2接下来配置github发布秘钥"></a>2接下来配置github发布秘钥</h3><p>打开Git Bash输入<code>ssh-keygen -t rsa -C &quot;username&quot;</code> </p>
+<blockquote>
+<p>(注：username为你git上的用户名)</p>
+</blockquote>
+<blockquote>
+<p>如果执行成功。返回：<br>Generating public/private rsa key pair.<br>Enter file in which to save the key (/Users/username/.ssh/id_rsa): //这里的username是电脑上的用户名，这个地址也是文件的存储地址，然后我们按回车。</p>
+</blockquote>
+<blockquote>
+<p>如果你以前有存储地址会返回:/Users/your username/.ssh/id_rsa already exists.Overwrite (y/n)? //直接输入y回车。</p>
+</blockquote>
+<blockquote>
+<p>如果以前没有储存地址就会出现:<br>Enter passphrase(empty for no passphrase): //也直接回车，两种情况回车后都会出现 Enter same passphrase again 然后接着回车会显示一长串内容其中还有一些..o.. o oo .oS. 之类的代码，这说明SSH key就已经生成了。</p>
+</blockquote>
+<blockquote>
+<p>文件目录就是：c:/User/username/.ssh/id_rsa.pub</p>
+</blockquote>
+<h3 id="3-打开Github官网注册账号，然后登录并创建仓库"><a href="#3-打开Github官网注册账号，然后登录并创建仓库" class="headerlink" title="3.打开Github官网注册账号，然后登录并创建仓库"></a>3.打开<a href="www.github.com">Github</a>官网注册账号，然后登录并创建仓库</h3><p><img src="https://i.imgur.com/o9nJ3sr.png" alt=""></p>
+<p><img src="https://i.imgur.com/ZopSEoj.png" alt=""></p>
+<blockquote>
+<p>红色部分的名字得和你用户名一样，后面的github.io是固定不变的，因为我之前创建过了所以会报错，你们没创建过就不会有错误提示，写好了以后点下面的绿色按钮Create repository</p>
+</blockquote>
+<h3 id="4-绑定Github"><a href="#4-绑定Github" class="headerlink" title="4.绑定Github"></a>4.绑定Github</h3><h4 id="4-1进入设置（Settings）找到"><a href="#4-1进入设置（Settings）找到" class="headerlink" title="4.1进入设置（Settings）找到"></a>4.1进入设置（Settings）找到</h4><p><img src="https://i.imgur.com/fUs3MU9.png" alt=""></p>
+<h4 id="4-2复制秘钥"><a href="#4-2复制秘钥" class="headerlink" title="4.2复制秘钥"></a>4.2复制秘钥</h4><blockquote>
+<p>然后将刚生成的<code>c:/User/username/.ssh/id_rsa.pub</code>文件用记事本打开复制所有内容</p>
+</blockquote>
+<h4 id="4-3-然后将你复制的内容粘贴到key中"><a href="#4-3-然后将你复制的内容粘贴到key中" class="headerlink" title="4.3 然后将你复制的内容粘贴到key中"></a>4.3 然后将你复制的内容粘贴到key中</h4><p><img src="https://i.imgur.com/jhG1Fij.png" alt=""><br><img src="https://i.imgur.com/7K3JOFF.png" alt=""></p>
+<blockquote>
+<p>再点击Add SSH Key<br>ok还有最后一步</p>
+</blockquote>
+<h4 id="4-4-测试是否和Github绑定成功"><a href="#4-4-测试是否和Github绑定成功" class="headerlink" title="4.4 测试是否和Github绑定成功"></a>4.4 测试是否和Github绑定成功</h4><p>打开Git Bash 输入<code>ssh -T git@github.com</code>如果看到以下画面就说明成功了。<br><img src="https://i.imgur.com/aD67KHG.png" alt=""></p>
+<h3 id="5-修改hexo文件"><a href="#5-修改hexo文件" class="headerlink" title="5.修改hexo文件"></a>5.修改hexo文件</h3><p>进入第3步初始化的博客目录找到<code>_config.yml</code>文件，用编辑器打开修改<br><code>deploy</code>和<code>type</code>字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: 这里是你Github的地址</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>repo地址怎么找？打开你的Github，找到刚创建的项目<br><img src="https://i.imgur.com/ja91Dco.png" alt=""></p>
+</blockquote>
+<h3 id="6-安装git插件"><a href="#6-安装git插件" class="headerlink" title="6.安装git插件"></a>6.安装git插件</h3><p>打开 Git Bash执行下面代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<h3 id="7-同步到Github"><a href="#7-同步到Github" class="headerlink" title="7.同步到Github"></a>7.同步到Github</h3><p>在本地博客目录右键打开Git Bash，输入<code>hexo g</code>再输入<code>hexo d</code>,等待片刻本地博客就同步到Github了，然后输入网址：<code>username.github.io</code>就可以访问了，这里的username改成你的创建仓库时候的名字。</p>
+<blockquote>
+<p>例如：我的就是 slayercjc.github.io</p>
+</blockquote>
 
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-11-18T09:13:49+08:00" content="2018-11-18">
+            <time class="time" itemprop="dateUpdated" datetime="2018-11-18T08:54:57+08:00" content="2018-11-18">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
                 本文最后更新于：2018-11-18
             </time>
@@ -205,7 +269,7 @@
                 
                 <div class="tags">
                     <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
-                    <a class="tag" href="/tags/centos/">centos</a>, <a class="tag" href="/tags/linux/">linux</a>
+                    <a class="tag" href="/tags/hexo/">hexo</a>, <a class="tag" href="/tags/域名/">域名</a>, <a class="tag" href="/tags/博客/">博客</a>, <a class="tag" href="/tags/免费/">免费</a>
                 </div>
             
         </section>
@@ -213,15 +277,14 @@
         
             <div class="prev-next">
                 
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
                             <h4>
-                                <a href="/2018/11/18/执行service-iptables-start出现redirecting-to-systemctl-Failed-to-not-loaded/" rel="prev" title="执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.">
-                                    
-                                        执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.
-                                    
+                                <a href="/cjom7rjww000044uvcx2i8ty1/" rel="prev" title="CentOS7+Nginx设置Systemctl restart nginx.service服务">
+                                  
+                                      CentOS7+Nginx设置Systemctl restart nginx.service服务
+                                  
                                 </a>
                             </h4>
                             
@@ -229,6 +292,27 @@
                                 <h6 class="tags">
                                     <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
                                     <a class="tag" href="/tags/nginx/">nginx</a>, <a class="tag" href="/tags/centos/">centos</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/cjom7rjxl000f44uv807rqidw/" rel="prev" title="MarkdownPad2 破解版">
+                                    
+                                        MarkdownPad2 破解版
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                                    <a class="tag" href="/tags/Markdownpad2/">Markdownpad2</a>, <a class="tag" href="/tags/破解版/">破解版</a>, <a class="tag" href="/tags/下载/">下载</a>
                                 </h6>
                             
                         </span>
@@ -255,13 +339,15 @@
         <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
         <ul>
             
-                <li><a href="http://slayercjc.ml/2018/11/18/执行service-iptables-start出现redirecting-to-systemctl-Failed-to-not-loaded/">执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.</a></li>
+                <li><a href="http://slayercjc.ml/cjom7rjxi000c44uvrmtrq5wt/">hexo 发布之后 gitpage 自定义域名失效</a></li>
             
-                <li><a href="http://slayercjc.ml/2018/11/18/CentOS7-Nginx设置Systemctl-restart-nginx-service服务/">CentOS7+Nginx设置Systemctl restart nginx.service服务</a></li>
+                <li><a href="http://slayercjc.ml/cjom7rjxd000744uveo3s4s21/">Linux下复制与粘贴</a></li>
             
-                <li><a href="http://slayercjc.ml/2018/11/11/让你拥有一个免费的博客-hexo安装-绑定免费顶级域名/">让你拥有一个免费的博客 hexo安装+绑定免费顶级域名</a></li>
+                <li><a href="http://slayercjc.ml/cjom7rjxg000944uvrg9ymwkc/">执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.</a></li>
             
-                <li><a href="http://slayercjc.ml/2018/11/11/MarkdownPad2 破解版/">MarkdownPad2 破解版</a></li>
+                <li><a href="http://slayercjc.ml/cjom7rjww000044uvcx2i8ty1/">CentOS7+Nginx设置Systemctl restart nginx.service服务</a></li>
+            
+                <li><a href="http://slayercjc.ml/cjom7rjxl000f44uv807rqidw/">MarkdownPad2 破解版</a></li>
             
         </ul>
     </div>
@@ -298,7 +384,7 @@
 
 <script>
     window.subData = {
-        title: 'Linux下复制与粘贴',
+        title: '让你拥有一个免费的博客 hexo安装+绑定免费顶级域名',
         tools: true
     }
 </script>
@@ -383,7 +469,7 @@
     <section class="m_widget tagcloud">
         <div class="header"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
         <div class="content">
-            <a href="/tags/Markdownpad2/" style="font-size: 14px; color: #999">Markdownpad2</a> <a href="/tags/centos/" style="font-size: 24px; color: #555">centos</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/nginx/" style="font-size: 19px; color: #777">nginx</a> <a href="/tags/下载/" style="font-size: 14px; color: #999">下载</a> <a href="/tags/免费/" style="font-size: 14px; color: #999">免费</a> <a href="/tags/博客/" style="font-size: 14px; color: #999">博客</a> <a href="/tags/域名/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/破解版/" style="font-size: 14px; color: #999">破解版</a>
+            <a href="/tags/Markdownpad2/" style="font-size: 14px; color: #999">Markdownpad2</a> <a href="/tags/centos/" style="font-size: 24px; color: #555">centos</a> <a href="/tags/hexo/" style="font-size: 19px; color: #777">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/nginx/" style="font-size: 19px; color: #777">nginx</a> <a href="/tags/下载/" style="font-size: 14px; color: #999">下载</a> <a href="/tags/免费/" style="font-size: 14px; color: #999">免费</a> <a href="/tags/博客/" style="font-size: 14px; color: #999">博客</a> <a href="/tags/域名/" style="font-size: 19px; color: #777">域名</a> <a href="/tags/破解版/" style="font-size: 14px; color: #999">破解版</a>
         </div>
     </section>
 
@@ -426,6 +512,13 @@
     
     
         
+    <section class="m_widget toc-wrapper">
+        <div class="header"><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;目录</div>
+        <div class="content">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-首先下载-Git-和-Node-js"><span class="toc-text">1.首先下载 Git 和 Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-打开桌面的Git-Bash"><span class="toc-text">2.打开桌面的Git Bash</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-初始化"><span class="toc-text">3.初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-启动本地博客"><span class="toc-text">4.启动本地博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-发布到Github"><span class="toc-text">5.发布到Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-首先打开Git-Bash初始化"><span class="toc-text">1.首先打开Git Bash初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2接下来配置github发布秘钥"><span class="toc-text">2接下来配置github发布秘钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-打开Github官网注册账号，然后登录并创建仓库"><span class="toc-text">3.打开Github官网注册账号，然后登录并创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-绑定Github"><span class="toc-text">4.绑定Github</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1进入设置（Settings）找到"><span class="toc-text">4.1进入设置（Settings）找到</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2复制秘钥"><span class="toc-text">4.2复制秘钥</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-然后将你复制的内容粘贴到key中"><span class="toc-text">4.3 然后将你复制的内容粘贴到key中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-测试是否和Github绑定成功"><span class="toc-text">4.4 测试是否和Github绑定成功</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-修改hexo文件"><span class="toc-text">5.修改hexo文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-安装git插件"><span class="toc-text">6.安装git插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-同步到Github"><span class="toc-text">7.同步到Github</span></a></li></ol></li></ol>
+        </div>
+    </section>
+
 
     
 

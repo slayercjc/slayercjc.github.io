@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://slayercjc.ml/"/>
-  <updated>2018-11-18T01:13:49.607Z</updated>
+  <updated>2018-11-18T01:29:55.074Z</updated>
   <id>http://slayercjc.ml/</id>
   
   <author>
@@ -17,21 +17,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Linux下复制与粘贴</title>
-    <link href="http://slayercjc.ml/2018/11/18/Linux%E4%B8%8B%E5%A4%8D%E5%88%B6%E4%B8%8E%E7%B2%98%E8%B4%B4/"/>
-    <id>http://slayercjc.ml/2018/11/18/Linux下复制与粘贴/</id>
-    <published>2018-11-18T01:13:09.000Z</published>
-    <updated>2018-11-18T01:13:49.607Z</updated>
+    <title>hexo 发布之后 gitpage 自定义域名失效</title>
+    <link href="http://slayercjc.ml/cjom7rjxi000c44uvrmtrq5wt/"/>
+    <id>http://slayercjc.ml/cjom7rjxi000c44uvrmtrq5wt/</id>
+    <published>2018-11-18T01:23:20.000Z</published>
+    <updated>2018-11-18T01:29:55.074Z</updated>
     
-    <content type="html"><![CDATA[<p>yy复制当前行<br>yw复制一个单词<br>y$复制光标到结尾<br>y^复制光标到行首<br>+yy复制+行<br>+yw复制+个单词<br>m,ny复制m到n行内容。</p><p>粘贴为“p”</p>]]></content>
+    <content type="html"><![CDATA[<p>使用 gitpage 功能将博客托管在了 github 上，并配置 CNAME 将自己的域名解析了过去，在 github 的仓库设置中开始 <code>custom domain</code> 的功能，这时候就可以直接使用自己的域名访问啦。<br><a id="more"></a></p><p><img src="1.png" alt=""></p><p>但是发现一个问题是，每次配置 custom domain 之后，再次 <code>hexo deploy</code> 之后，custom domain 会被重置失效。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在 hexo 生成的博客的 <code>source</code> 目录下新建一个 <code>CNAME</code> 文件，然后在这个文件中填入你的域名，这样就不会每次发布之后，gitpage 里的 custom domain 都被重置掉啦。</p><p><img src="2.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用 gitpage 功能将博客托管在了 github 上，并配置 CNAME 将自己的域名解析了过去，在 github 的仓库设置中开始 &lt;code&gt;custom domain&lt;/code&gt; 的功能，这时候就可以直接使用自己的域名访问啦。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://slayercjc.ml/tags/hexo/"/>
+    
+      <category term="域名" scheme="http://slayercjc.ml/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下复制与粘贴</title>
+    <link href="http://slayercjc.ml/cjom7rjxd000744uveo3s4s21/"/>
+    <id>http://slayercjc.ml/cjom7rjxd000744uveo3s4s21/</id>
+    <published>2018-11-18T01:13:09.000Z</published>
+    <updated>2018-11-18T01:20:19.829Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>yy</code> 复制当前行</p><p><code>yw</code> 复制一个单词 </p><p><code>y$</code> 复制光标到结尾 </p><p><code>y^</code> 复制光标到行首 </p><p><code>+yy</code> 复制+行 </p><p><code>+yw</code> 复制+个单词 </p><p><code>m,ny</code> 复制m到n行内容。</p><p>粘贴为<code>p</code></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;yy复制当前行&lt;br&gt;yw复制一个单词&lt;br&gt;y$复制光标到结尾&lt;br&gt;y^复制光标到行首&lt;br&gt;+yy复制+行&lt;br&gt;+yw复制+个单词&lt;br&gt;m,ny复制m到n行内容。&lt;/p&gt;
-&lt;p&gt;粘贴为“p”&lt;/p&gt;
-
+        &lt;p&gt;&lt;code&gt;yy&lt;/code&gt; 复制当前行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yw&lt;/code&gt; 复制一个单词 &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;y$&lt;/code&gt; 复制光标到结尾 &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;y^&lt;/code&gt; 复制光标到行首 &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;+yy&lt;/co
       
     
     </summary>
@@ -47,8 +71,8 @@
   
   <entry>
     <title>执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.</title>
-    <link href="http://slayercjc.ml/2018/11/18/%E6%89%A7%E8%A1%8Cservice-iptables-start%E5%87%BA%E7%8E%B0redirecting-to-systemctl-Failed-to-not-loaded/"/>
-    <id>http://slayercjc.ml/2018/11/18/执行service-iptables-start出现redirecting-to-systemctl-Failed-to-not-loaded/</id>
+    <link href="http://slayercjc.ml/cjom7rjxg000944uvrg9ymwkc/"/>
+    <id>http://slayercjc.ml/cjom7rjxg000944uvrg9ymwkc/</id>
     <published>2018-11-18T00:45:54.000Z</published>
     <updated>2018-11-18T00:52:09.168Z</updated>
     
@@ -75,8 +99,8 @@
   
   <entry>
     <title>CentOS7+Nginx设置Systemctl restart nginx.service服务</title>
-    <link href="http://slayercjc.ml/2018/11/18/CentOS7-Nginx%E8%AE%BE%E7%BD%AESystemctl-restart-nginx-service%E6%9C%8D%E5%8A%A1/"/>
-    <id>http://slayercjc.ml/2018/11/18/CentOS7-Nginx设置Systemctl-restart-nginx-service服务/</id>
+    <link href="http://slayercjc.ml/cjom7rjww000044uvcx2i8ty1/"/>
+    <id>http://slayercjc.ml/cjom7rjww000044uvcx2i8ty1/</id>
     <published>2018-11-18T00:29:39.000Z</published>
     <updated>2018-11-18T00:53:04.633Z</updated>
     
@@ -101,8 +125,8 @@
   
   <entry>
     <title>让你拥有一个免费的博客 hexo安装+绑定免费顶级域名</title>
-    <link href="http://slayercjc.ml/2018/11/11/%E8%AE%A9%E4%BD%A0%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%9A%E5%AE%A2-hexo%E5%AE%89%E8%A3%85-%E7%BB%91%E5%AE%9A%E5%85%8D%E8%B4%B9%E9%A1%B6%E7%BA%A7%E5%9F%9F%E5%90%8D/"/>
-    <id>http://slayercjc.ml/2018/11/11/让你拥有一个免费的博客-hexo安装-绑定免费顶级域名/</id>
+    <link href="http://slayercjc.ml/cjom7rjxo000i44uv8gpt1x6v/"/>
+    <id>http://slayercjc.ml/cjom7rjxo000i44uv8gpt1x6v/</id>
     <published>2018-11-11T01:45:03.000Z</published>
     <updated>2018-11-18T00:54:57.611Z</updated>
     
@@ -119,18 +143,18 @@
     
       <category term="hexo" scheme="http://slayercjc.ml/tags/hexo/"/>
     
+      <category term="域名" scheme="http://slayercjc.ml/tags/%E5%9F%9F%E5%90%8D/"/>
+    
       <category term="博客" scheme="http://slayercjc.ml/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="免费" scheme="http://slayercjc.ml/tags/%E5%85%8D%E8%B4%B9/"/>
-    
-      <category term="域名" scheme="http://slayercjc.ml/tags/%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
   <entry>
     <title>MarkdownPad2 破解版</title>
-    <link href="http://slayercjc.ml/2018/11/11/MarkdownPad2%20%E7%A0%B4%E8%A7%A3%E7%89%88/"/>
-    <id>http://slayercjc.ml/2018/11/11/MarkdownPad2 破解版/</id>
+    <link href="http://slayercjc.ml/cjom7rjxl000f44uv807rqidw/"/>
+    <id>http://slayercjc.ml/cjom7rjxl000f44uv807rqidw/</id>
     <published>2018-11-11T01:17:39.443Z</published>
     <updated>2018-11-18T00:54:41.939Z</updated>
     
