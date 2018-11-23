@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://slayercjc.ml/"/>
-  <updated>2018-11-18T01:29:55.074Z</updated>
+  <updated>2018-11-23T15:43:19.595Z</updated>
   <id>http://slayercjc.ml/</id>
   
   <author>
@@ -17,9 +17,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>梅林固件软件中心一直空白与更新中的解决方法</title>
+    <link href="http://slayercjc.ml/cjou73p1h000a2cuvulifye0c/"/>
+    <id>http://slayercjc.ml/cjou73p1h000a2cuvulifye0c/</id>
+    <published>2018-11-23T15:38:06.000Z</published>
+    <updated>2018-11-23T15:43:19.595Z</updated>
+    
+    <content type="html"><![CDATA[<p>解决和软件中心打开空白的问题，包括打开页面黑页的问题</p><p>开始梅林固件取消了<code>telnet</code>  所以方法变更，从系统设置开启<code>ssh</code></p><p><img src="1.png" alt=""></p><ol><li>然后用 putty，然后输入登录路由器的用户名和密码（输密码是看不见的直接Enter就行）</li></ol><p><img src="2.png" alt=""></p><ol start="2"><li>cd /jffs</li><li>ls -a  (显示所有文件，包括以.开头的隐藏文件夹)</li><li>我是删掉了整个.koolshare隐藏文件夹，命令是rm -rf .koolshare<br>注意命令之间的空格要打上<br>可以对比下图来参照</li></ol><p><img src="3.png" alt=""></p><p>利用这个方法可以解决问题，就是把koolshare的隐藏文件删除后，重启路由器就好了，能解决掉$$和软件中心的多种问题，个人觉得应该就是还原重置了这一部分</p><p>另外有出现格式化后JFFS没挂载的，不妨再重启一次机器就好了 （有的可能不行，但是我是可以的）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;解决和软件中心打开空白的问题，包括打开页面黑页的问题&lt;/p&gt;
+&lt;p&gt;开始梅林固件取消了&lt;code&gt;telnet&lt;/code&gt;  所以方法变更，从系统设置开启&lt;code&gt;ssh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;
+      
+    
+    </summary>
+    
+      <category term="技术文章" scheme="http://slayercjc.ml/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/"/>
+    
+    
+      <category term="梅林" scheme="http://slayercjc.ml/tags/%E6%A2%85%E6%9E%97/"/>
+    
+      <category term="路由器" scheme="http://slayercjc.ml/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+      <category term="软件中心" scheme="http://slayercjc.ml/tags/%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83/"/>
+    
+      <category term="梅林固件" scheme="http://slayercjc.ml/tags/%E6%A2%85%E6%9E%97%E5%9B%BA%E4%BB%B6/"/>
+    
+      <category term="koolshare" scheme="http://slayercjc.ml/tags/koolshare/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo 发布之后 gitpage 自定义域名失效</title>
-    <link href="http://slayercjc.ml/cjoodqzhz000dfsuv0acvznm3/"/>
-    <id>http://slayercjc.ml/cjoodqzhz000dfsuv0acvznm3/</id>
+    <link href="http://slayercjc.ml/cjou73p1d00072cuvev2kuzda/"/>
+    <id>http://slayercjc.ml/cjou73p1d00072cuvev2kuzda/</id>
     <published>2018-11-18T01:23:20.000Z</published>
     <updated>2018-11-18T01:29:55.074Z</updated>
     
@@ -40,8 +77,8 @@
   
   <entry>
     <title>Linux下复制与粘贴</title>
-    <link href="http://slayercjc.ml/cjoodqzhf0001fsuvrfz5hqa6/"/>
-    <id>http://slayercjc.ml/cjoodqzhf0001fsuvrfz5hqa6/</id>
+    <link href="http://slayercjc.ml/cjou73p1200012cuvt81xlgxu/"/>
+    <id>http://slayercjc.ml/cjou73p1200012cuvt81xlgxu/</id>
     <published>2018-11-18T01:13:09.000Z</published>
     <updated>2018-11-18T01:20:19.829Z</updated>
     
@@ -71,8 +108,8 @@
   
   <entry>
     <title>执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.</title>
-    <link href="http://slayercjc.ml/cjoodqzhq0007fsuvedllprbh/"/>
-    <id>http://slayercjc.ml/cjoodqzhq0007fsuvedllprbh/</id>
+    <link href="http://slayercjc.ml/cjou73p1f00092cuvw47d18le/"/>
+    <id>http://slayercjc.ml/cjou73p1f00092cuvw47d18le/</id>
     <published>2018-11-18T00:45:54.000Z</published>
     <updated>2018-11-18T00:52:09.168Z</updated>
     
@@ -99,8 +136,8 @@
   
   <entry>
     <title>CentOS7+Nginx设置Systemctl restart nginx.service服务</title>
-    <link href="http://slayercjc.ml/cjoodqzhv0009fsuvst6x5a9x/"/>
-    <id>http://slayercjc.ml/cjoodqzhv0009fsuvst6x5a9x/</id>
+    <link href="http://slayercjc.ml/cjou73p2700182cuv4oioayjw/"/>
+    <id>http://slayercjc.ml/cjou73p2700182cuv4oioayjw/</id>
     <published>2018-11-18T00:29:39.000Z</published>
     <updated>2018-11-18T00:53:04.633Z</updated>
     
@@ -125,8 +162,8 @@
   
   <entry>
     <title>让你拥有一个免费的博客 hexo安装+绑定免费顶级域名</title>
-    <link href="http://slayercjc.ml/cjoodqzhw000afsuv87b9wn7q/"/>
-    <id>http://slayercjc.ml/cjoodqzhw000afsuv87b9wn7q/</id>
+    <link href="http://slayercjc.ml/cjou73p2600172cuv8f9w7hma/"/>
+    <id>http://slayercjc.ml/cjou73p2600172cuv8f9w7hma/</id>
     <published>2018-11-11T01:45:03.000Z</published>
     <updated>2018-11-18T00:54:57.611Z</updated>
     
@@ -143,18 +180,18 @@
     
       <category term="hexo" scheme="http://slayercjc.ml/tags/hexo/"/>
     
+      <category term="域名" scheme="http://slayercjc.ml/tags/%E5%9F%9F%E5%90%8D/"/>
+    
       <category term="博客" scheme="http://slayercjc.ml/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="免费" scheme="http://slayercjc.ml/tags/%E5%85%8D%E8%B4%B9/"/>
-    
-      <category term="域名" scheme="http://slayercjc.ml/tags/%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
   <entry>
     <title>MarkdownPad2 破解版</title>
-    <link href="http://slayercjc.ml/cjoodqzhl0003fsuvwc6riert/"/>
-    <id>http://slayercjc.ml/cjoodqzhl0003fsuvwc6riert/</id>
+    <link href="http://slayercjc.ml/cjou73p1800032cuvfsknfr2n/"/>
+    <id>http://slayercjc.ml/cjou73p1800032cuvfsknfr2n/</id>
     <published>2018-11-11T01:17:39.443Z</published>
     <updated>2018-11-18T00:54:41.939Z</updated>
     

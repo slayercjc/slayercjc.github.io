@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Category: 技术文章 | Slayercjc Blog</title>
+  <title>hexo 发布之后 gitpage 自定义域名失效 | Slayercjc Blog</title>
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="https://img.vim-cn.com/e1/c3232a7fc759e51ce62b9319b52c2cb1356b7e">
@@ -166,278 +166,167 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            
-    <script>
-        window.subData= { title:'category : 技术文章'}
-    </script>
-
-
-<section class="post-list">
-    
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
+            <article id="post-hexo-发布之后-gitpage-自定义域名失效" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
     <section class="meta">
-        <h2 class="title">
-            <a href="/cjou73p1h000a2cuvulifye0c/">
-                
-                    梅林固件软件中心一直空白与更新中的解决方法
-                
-            </a>
-        </h2>
+        
+            <h1 class="title">hexo 发布之后 gitpage 自定义域名失效</h1>
+        
         <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-11-23
+            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+            2018-11-18
         </time>
+        <div class="browse"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </div>
         
     
     <div class="cats">
         <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/技术文章/">技术文章</a>
+        
     </div>
 
 
     </section>
 
     <section class="article typo">
-        <p>解决和软件中心打开空白的问题，包括打开页面黑页的问题</p>
-<p>开始梅林固件取消了<code>telnet</code>  所以方法变更，从系统设置开启<code>ssh</code></p>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>使用 gitpage 功能将博客托管在了 github 上，并配置 CNAME 将自己的域名解析了过去，在 github 的仓库设置中开始 <code>custom domain</code> 的功能，这时候就可以直接使用自己的域名访问啦。<br><a id="more"></a></p>
 <p><img src="1.png" alt=""></p>
-<ol>
-<li>然后用 putty，然后输入登录路由器的用户名和密码（输密码是看不见的直接Enter就行）</li>
-</ol>
+<p>但是发现一个问题是，每次配置 custom domain 之后，再次 <code>hexo deploy</code> 之后，custom domain 会被重置失效。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在 hexo 生成的博客的 <code>source</code> 目录下新建一个 <code>CNAME</code> 文件，然后在这个文件中填入你的域名，这样就不会每次发布之后，gitpage 里的 custom domain 都被重置掉啦。</p>
 <p><img src="2.png" alt=""></p>
-<ol start="2">
-<li>cd /jffs</li>
-<li>ls -a  (显示所有文件，包括以.开头的隐藏文件夹)</li>
-<li>我是删掉了整个.koolshare隐藏文件夹，命令是rm -rf .koolshare<br>注意命令之间的空格要打上<br>可以对比下图来参照</li>
-</ol>
-<p><img src="3.png" alt=""></p>
-<p>利用这个方法可以解决问题，就是把koolshare的隐藏文件删除后，重启路由器就好了，能解决掉$$和软件中心的多种问题，个人觉得应该就是还原重置了这一部分</p>
-<p>另外有出现格式化后JFFS没挂载的，不妨再重启一次机器就好了 （有的可能不行，但是我是可以的）</p>
+
+        </div>
+
+        <section class="meta">
+            <time class="time" itemprop="dateUpdated" datetime="2018-11-18T09:29:55+08:00" content="2018-11-18">
+                <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
+                本文最后更新于：2018-11-18
+            </time>
+            
+                
+                <div class="tags">
+                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                    <a class="tag" href="/tags/hexo/">hexo</a>, <a class="tag" href="/tags/域名/">域名</a>
+                </div>
+            
+        </section>
 
         
-
-        
-            <div class="full-width auto-padding tags">
+            <div class="prev-next">
                 
-                    <a href="/tags/梅林/"><i class="fas fa-tag fa-fw"></i>&nbsp;梅林</a>
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
+                            <h4>
+                                <a href="/cjou73p1h000a2cuvulifye0c/" rel="prev" title="梅林固件软件中心一直空白与更新中的解决方法">
+                                  
+                                      梅林固件软件中心一直空白与更新中的解决方法
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                                    <a class="tag" href="/tags/梅林/">梅林</a>, <a class="tag" href="/tags/路由器/">路由器</a>, <a class="tag" href="/tags/软件中心/">软件中心</a>, <a class="tag" href="/tags/梅林固件/">梅林固件</a>, <a class="tag" href="/tags/koolshare/">koolshare</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
                 
-                    <a href="/tags/路由器/"><i class="fas fa-tag fa-fw"></i>&nbsp;路由器</a>
                 
-                    <a href="/tags/软件中心/"><i class="fas fa-tag fa-fw"></i>&nbsp;软件中心</a>
-                
-                    <a href="/tags/梅林固件/"><i class="fas fa-tag fa-fw"></i>&nbsp;梅林固件</a>
-                
-                    <a href="/tags/koolshare/"><i class="fas fa-tag fa-fw"></i>&nbsp;koolshare</a>
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/cjou73p1200012cuvt81xlgxu/" rel="prev" title="Linux下复制与粘贴">
+                                    
+                                        Linux下复制与粘贴
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                                    <a class="tag" href="/tags/linux/">linux</a>, <a class="tag" href="/tags/centos/">centos</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
                 
             </div>
         
+
     </section>
+
 </article>
 
-        </div>
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
-    <section class="meta">
-        <h2 class="title">
-            <a href="/cjou73p1200012cuvt81xlgxu/">
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+    <article class="post white-box comments">
+        <section class="article typo">
+
+            
                 
-                    Linux下复制与粘贴
-                
-            </a>
-        </h2>
-        <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-11-18
-        </time>
-        
-    
-    <div class="cats">
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/技术文章/">技术文章</a>
+
+    <div class="recommended_posts">
+        <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
+        <ul>
+            
+                <li><a href="http://slayercjc.ml/cjou73p1h000a2cuvulifye0c/">梅林固件软件中心一直空白与更新中的解决方法</a></li>
+            
+                <li><a href="http://slayercjc.ml/cjou73p1200012cuvt81xlgxu/">Linux下复制与粘贴</a></li>
+            
+                <li><a href="http://slayercjc.ml/cjou73p1f00092cuvw47d18le/">执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.</a></li>
+            
+                <li><a href="http://slayercjc.ml/cjou73p2700182cuv4oioayjw/">CentOS7+Nginx设置Systemctl restart nginx.service服务</a></li>
+            
+                <li><a href="http://slayercjc.ml/cjou73p2600172cuv8f9w7hma/">让你拥有一个免费的博客 hexo安装+绑定免费顶级域名</a></li>
+            
+        </ul>
     </div>
 
 
-    </section>
+            
 
-    <section class="article typo">
-        <p><code>yy</code> 复制当前行</p>
-<p><code>yw</code> 复制一个单词 </p>
-<p><code>y$</code> 复制光标到结尾 </p>
-<p><code>y^</code> 复制光标到行首 </p>
-<p><code>+yy</code> 复制+行 </p>
-<p><code>+yw</code> 复制+个单词 </p>
-<p><code>m,ny</code> 复制m到n行内容。</p>
-<p>粘贴为<code>p</code></p>
+            
 
-        
+                
 
-        
-            <div class="full-width auto-padding tags">
                 
-                    <a href="/tags/linux/"><i class="fas fa-tag fa-fw"></i>&nbsp;linux</a>
-                
-                    <a href="/tags/centos/"><i class="fas fa-tag fa-fw"></i>&nbsp;centos</a>
-                
-            </div>
-        
-    </section>
-</article>
 
-        </div>
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
-    <section class="meta">
-        <h2 class="title">
-            <a href="/cjou73p1f00092cuvw47d18le/">
                 
-                    执行service iptables start出现redirecting to systemctl ...Failed to ...not loaded.
+                    
+                        <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Valine评论</h4>
+                        <div class="subtitle">
+                          <h6><b>文明评论，请勿灌水。</b>为了便于区分和接收回复提醒，请您在留言时填写一下<b>昵称</b>和<b>邮箱</b>。</h6>
+                        <div>
+                        <section id="comments">
+                            <div id="valine_container" class="valine_thread">
+                                <i class="fas fa-spinner fa-spin fa-fw"></i>
+                            </div>
+                        </section>
+                        <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+                        <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+                    
                 
-            </a>
-        </h2>
-        <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-11-18
-        </time>
-        
-    
-    <div class="cats">
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/技术文章/">技术文章</a>
-    </div>
+            
+
+        </div></div></section>
+    </article>
 
 
-    </section>
-
-    <section class="article typo">
-        <p>在centOS 7系统中运行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables stop</span><br></pre></td></tr></table></figure>
-<p>发现出错。</p>
-<p>解决办法： </p>
-<p>切换到root用户下，执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install iptables-service</span><br><span class="line">service <span class="built_in">enable</span> iptables //设置开机启动</span><br></pre></td></tr></table></figure>
-<p>之后就可以使用以下指令了：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables [start|stop|restart|save]</span><br></pre></td></tr></table></figure>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/centos/"><i class="fas fa-tag fa-fw"></i>&nbsp;centos</a>
-                
-                    <a href="/tags/nginx/"><i class="fas fa-tag fa-fw"></i>&nbsp;nginx</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-        </div>
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
-    <section class="meta">
-        <h2 class="title">
-            <a href="/cjou73p2700182cuv4oioayjw/">
-                
-                    CentOS7+Nginx设置Systemctl restart nginx.service服务
-                
-            </a>
-        </h2>
-        <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-11-18
-        </time>
-        
-    
-    <div class="cats">
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/技术文章/">技术文章</a>
-    </div>
-
-
-    </section>
-
-    <section class="article typo">
-        <p>centos 7以上是用Systemd进行系统初始化的，Systemd 是 Linux 系统中最新的初始化系统（init），它主要的设计目标是克服 sysvinit 固有的缺点，提高系统的启动速度。关于Systemd的详情介绍在这里。</p>
-<p>Systemd服务文件以.service结尾，比如现在要建立nginx为开机启动，如果用yum install命令安装的，yum命令会自动创建nginx.service文件，直接用命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemcel <span class="built_in">enable</span> nginx.service</span><br></pre></td></tr></table></figure>
-        
-            <div class="readmore">
-                <a href="/cjou73p2700182cuv4oioayjw/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/centos/"><i class="fas fa-tag fa-fw"></i>&nbsp;centos</a>
-                
-                    <a href="/tags/nginx/"><i class="fas fa-tag fa-fw"></i>&nbsp;nginx</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-        </div>
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
-    <section class="meta">
-        <h2 class="title">
-            <a href="/cjou73p2600172cuv8f9w7hma/">
-                
-                    让你拥有一个免费的博客 hexo安装+绑定免费顶级域名
-                
-            </a>
-        </h2>
-        <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-11-11
-        </time>
-        
-    
-    <div class="cats">
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/技术文章/">技术文章</a>
-    </div>
-
-
-    </section>
-
-    <section class="article typo">
-        <h2 id="1-首先下载-Git-和-Node-js"><a href="#1-首先下载-Git-和-Node-js" class="headerlink" title="1.首先下载 Git 和 Node.js"></a>1.首先下载 <a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a> 和 <a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git下载地址：http://git-scm.com/</span><br><span class="line">Node.js下载地址：http://nodejs.org/</span><br></pre></td></tr></table></figure>
-        
-            <div class="readmore">
-                <a href="/cjou73p2600172cuv8f9w7hma/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/hexo/"><i class="fas fa-tag fa-fw"></i>&nbsp;hexo</a>
-                
-                    <a href="/tags/域名/"><i class="fas fa-tag fa-fw"></i>&nbsp;域名</a>
-                
-                    <a href="/tags/博客/"><i class="fas fa-tag fa-fw"></i>&nbsp;博客</a>
-                
-                    <a href="/tags/免费/"><i class="fas fa-tag fa-fw"></i>&nbsp;免费</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-        </div>
-    
-</section>
-
+<script>
+    window.subData = {
+        title: 'hexo 发布之后 gitpage 自定义域名失效',
+        tools: true
+    }
+</script>
 
 
         </div>
@@ -596,6 +485,13 @@
     
     
         
+    <section class="m_widget toc-wrapper">
+        <div class="header"><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;目录</div>
+        <div class="content">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-text">解决方案</span></a></li></ol>
+        </div>
+    </section>
+
 
     
 
@@ -656,6 +552,35 @@
 <script src="/js/search.js"></script>
 <script src="/js/app.js"></script>
 
+
+    
+    
+    
+        
+            <script>
+            var GUEST_INFO = ['nick','mail','link'];
+            var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+                return GUEST_INFO.indexOf(item) > -1
+            });
+            var notify = 'false' == true;
+            var verify = 'false' == true;
+            var valine = new Valine();
+            valine.init({
+                el: '#valine_container',
+                notify: notify,
+                verify: verify,
+                guest_info: guest_info,
+                appId: "zNF03OeaQnqmIki6p7bHhQpH-gzGzoHsz",
+                appKey: "npQXe9Nhi0lYXE1U5g8H6pDl",
+                placeholder: "快来评论吧~",
+                pageSize:'10',
+                avatar:'mp',
+                lang:'zh-cn',
+                highlight:''
+            })
+            </script>
+        
+    
 
 
     <script>setLoadingBarProgress(100);</script>
